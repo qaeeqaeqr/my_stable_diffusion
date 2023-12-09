@@ -427,7 +427,7 @@ def generate_image_by_text(prompt, random_seed=42):
     parser.add_argument(
         "--n_samples",
         type=int,
-        default=1,
+        default=5,
         help="how many samples to produce for each given prompt. A.k.a. batch size",
     )
     parser.add_argument(
@@ -585,3 +585,7 @@ def generate_image_by_text(prompt, random_seed=42):
     print(f"Your samples are ready and waiting for you here: \n{outpath}")
 
     return opt
+
+if __name__ == '__main__':
+    generate_image_by_text('a lovely cat flying in the sky',
+                           random_seed=65)
